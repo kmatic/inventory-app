@@ -1,6 +1,6 @@
 const { SchemaType } = require("mongoose");
 
-const mongoose = required('mongoose');
+const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
@@ -9,7 +9,7 @@ const ProduceSchema = new Schema ({
     description: { type: String },
     price: { type: Number, required: true },
     stock: { type: Number, required: true },
-    type: { type: Schema.ObjectId, ref: 'Type' }
+    category: { type: Schema.ObjectId, ref: 'Category' }
 });
 
 ProduceSchema.virtual('url').get(function () {
