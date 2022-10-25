@@ -26,7 +26,7 @@ exports.produce_list = function (req, res, next) {
 };
 
 exports.produce_detail = function (req, res, next) {
-    Produce.find(req.params.id)
+    Produce.findById(req.params.id)
         .populate('category')
         .exec(function (err, produce) {
             if (err) {

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head', {title: title}); %>
+  </head>
+  <body>
+    <header>
+      <%- include('./partials/header'); %>
+    </header>
+    <main>
+        <h1><%= title %></h1>
+        <p>Description: <%= produce.description %></p>
+        <p>Price: <%= produce.price %></p>
+        <p>Stock: <%= produce.stock %></p>
+        <p>Category: <%= produce.category.name %></p>
+        <div style='margin-top:30px'>
+            <p><a href='<%= produce.url %>/delete'>Delete produce</a></p>
+            <p><a href='<%= produce.url %>/update'>Update produce</a></p>
+        </div>
+    </main>
+  </body>
+</html>

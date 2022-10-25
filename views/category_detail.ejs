@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head', {title: title}); %>
+  </head>
+  <body>
+    <header>
+      <%- include('./partials/header'); %>
+    </header>
+    <main>
+        <h1><%= title %></h1>
+        <div style='margin-left:20px;margin-top:20px'>
+            <h4>Produce</h4>
+            <dl>
+            <% category_produce.forEach((produce) => { %>
+                <dt>
+                    <a href='<%= produce.url %>'><%= produce.name %></a>
+                </dt>
+            <% }) %>
+            </dl>
+        </div>
+        <div style='margin-top:30px'>
+            <p><a href='<%= category.url %>/delete'>Delete category</a></p>
+            <p><a href='<%= category.url %>/update'>Update category</a></p>
+        </div>
+    </main>
+  </body>
+</html>

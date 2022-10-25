@@ -25,7 +25,7 @@ router.get('/', produce_controller.index);
 router.get('/produce/:id', produce_controller.produce_detail);
 
 // GET request for list of all produce
-router.get('/producelist', produce_controller.produce_list);
+router.get('/produce', produce_controller.produce_list);
 
 // Category routes
 

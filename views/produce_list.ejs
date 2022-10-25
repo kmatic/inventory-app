@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head', {title: title}); %>
+  </head>
+  <body>
+    <header>
+      <%- include('./partials/header'); %>
+    </header>
+    <main>
+        <h1><%= title %></h1>
+        <ul>
+        <% produce_list.forEach((produce) => { %>
+            <li>
+                <a href='<%= produce.url %>'><%= produce.name %></a> 
+            </li>
+        <% }); %>
+        </ul>
+        <div style='margin-top:30px'>
+            <p><a href='/catalog/produce/create'>New produce</a></p>
+        </div>
+    </main>
+  </body>
+</html>
